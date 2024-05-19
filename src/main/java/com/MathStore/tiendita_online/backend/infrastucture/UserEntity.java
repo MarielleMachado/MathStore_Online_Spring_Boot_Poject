@@ -1,5 +1,6 @@
 package com.MathStore.tiendita_online.backend.infrastucture;
 
+
 import com.MathStore.tiendita_online.backend.domain.model.UserType;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -15,7 +16,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class UserEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //generate AUTO id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String username;
     private String firstName;
