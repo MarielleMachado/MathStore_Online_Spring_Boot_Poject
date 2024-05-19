@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.5</version>
+		<version>2.5.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -46,7 +46,7 @@
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<scope>runtime</scope>
+			<version>42.3.0</version> <!-- Versión actualizada del controlador JDBC -->
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -71,6 +71,11 @@
 			<artifactId>lombok-mapstruct-binding</artifactId>
 			<version>${version.mapstruct-lombok}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.4.32.Final</version> <!-- La versión puede variar -->
+		</dependency>
 		<!-- Springfox Swagger dependencies -->
 		<dependency>
 			<groupId>io.springfox</groupId>
@@ -78,11 +83,17 @@
 			<version>3.0.0</version>
 		</dependency>
 		<dependency>
-			<groupId>jakarta.servlet</groupId>
-			<artifactId>jakarta.servlet-api</artifactId>
-			<version>5.0.0</version>
+			<groupId>jakarta.persistence</groupId>
+			<artifactId>jakarta.persistence-api</artifactId>
+			<version>3.0.0</version> <!-- Versión específica -->
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.1</version> <!-- or the version appropriate for your project -->
 			<scope>provided</scope>
 		</dependency>
+
 	</dependencies>
 
 	<!-- Build Configuration -->
@@ -112,6 +123,12 @@
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok-mapstruct-binding</artifactId>
 							<version>${version.mapstruct-lombok}</version>
+						</path>
+						<path>
+							<groupId>jakarta.servlet</groupId>
+							<artifactId>jakarta.servlet-api</artifactId>
+							<version>5.0.0</version>
+							<scope>provided</scope>
 						</path>
 					</annotationProcessorPaths>
 				</configuration>
