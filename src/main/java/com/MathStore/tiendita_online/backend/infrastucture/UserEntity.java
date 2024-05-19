@@ -20,6 +20,7 @@ public class UserEntity {
     private String username;
     private String firstName;
     private String lastName;
+    @Column(unique = true)
     private String email;
     private String address;
     private String cellphone;
