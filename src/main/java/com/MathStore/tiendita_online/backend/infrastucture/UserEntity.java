@@ -1,15 +1,10 @@
-package com.MathStore.tiendita_online.backend.domain.model;
+package com.MathStore.tiendita_online.backend.infrastucture;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.MathStore.tiendita_online.backend.domain.model.UserType;
 
 import java.time.LocalDateTime;
 
-@Data //Get Set
-@AllArgsConstructor //constructor
-@NoArgsConstructor //empty constructor
-public class User {
+public class UserEntity {
     private Integer id;
     private String username;
     private String firstName;
@@ -19,6 +14,6 @@ public class User {
     private String cellphone;
     private String password;
     private UserType userType;
-    private  LocalDateTime dateCreated;
+    private LocalDateTime dateCreated;
     private LocalDateTime dateUpdated;
 }
