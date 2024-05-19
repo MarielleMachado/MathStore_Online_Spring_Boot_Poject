@@ -1,6 +1,6 @@
 # MathStore
 
-## ![MathStore Logo](ruta/a/tu/logo.png)
+## ![MathStore Logo](src/main/resources/static/Logo.jpeg)
 
 ## Descripción
 
